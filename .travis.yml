@@ -1,11 +1,9 @@
 language: android
-before_script:
-    - android update sdk --filter extra-android-support --no-ui --force > /dev/null
-    - android update sdk --filter extra-android-m2repository --no-ui --force > /dev/null
 android:
   components:
     - build-tools-21.1.1
     - android-21
     - extra-android-support
+    - extra-android-m2repository
 script:
     - ./gradlew clean build
